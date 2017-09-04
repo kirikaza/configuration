@@ -1,0 +1,73 @@
+[user]
+	name = Kirill Kazakov
+
+[alias]
+	br = branch
+	bu = "!f() { local br=`git rev-parse --abbrev-ref HEAD` ; git br --set-upstream-to=origin/$br ; }; f"
+	bx = checkout -b
+	co = checkout
+	cp = cherry-pick
+	d  = diff
+	dt = diff --stat
+	dw = diff --color-words
+	e  = diff --staged
+	et = diff --staged --stat
+	ew = diff --staged --color-words
+	dvi = difftool -y -t vimdiff
+	dvid = difftool -y -t _vimdirdiff --dir-diff
+	ff = merge --ff-only
+	l = log --oneline --decorate
+	ls = log --graph --date=short --format=\"%C(green)%h%C(reset) %s %C(blue)%aN%C(reset) %C(cyan)%ad%C(green)%d %C(reset)\"
+	lsz = !git ls -9
+	lf = !git ls --first-parent
+	lfz = !git lf -9
+	sl = !sl
+	lsd = "!f() { local br=$1; [ -z \"$br\" ] && br=`git rev-parse --abbrev-ref HEAD` ; git ls --boundary $br...origin/$br ; } ; f"
+	m  = commit
+	ma = commit --amend
+	max = commit --amend --no-edit
+	mm = commit -m
+	h  = show
+	hw = show --color-words
+	ht = show --stat
+	st = status -s -b
+	stig = status -s -b --ignored
+	rb = rebase --autostash
+
+[color]
+	branch = true
+	diff = auto
+	grep = true
+	interactive = auto
+	showbranch = true
+	status = true
+	ui = auto
+
+[core]
+	ignorecase = true
+	pager = less -x4
+	trustctime = false
+
+[diff]
+	renames = copy
+	mnemonicprefix = true
+	wordRegex = [A-Za-z_][A-Za-z0-9_]*|[0-9]+|[^A-Za-z0-9_[:space:]]
+
+[grep]
+	patterntype = extended
+
+[merge]
+	conflictstyle = diff3
+	defaulttoupstream = true
+
+[pager]
+	lsz = false
+
+[push]
+	default = current
+
+[pull]
+	rebase = true
+
+[rerere]
+	enabled = true
