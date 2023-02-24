@@ -17,7 +17,7 @@
 	dvid = difftool -y -t _vimdirdiff --dir-diff
 	ff = merge --ff-only
 	l = log --oneline --decorate
-	ls = log --graph --date=short --format=\"%C(green)%h%C(reset) %s %C(blue)%aN%C(reset) %C(cyan)%ad%C(green)%d %C(reset)\"
+	ls = log --graph --date=short --format=\"%C(green)%h%C(reset) %s %C(blue){%G?} %aN%C(reset) %C(cyan)%ad%C(green)%d %C(reset)\"
 	lsz = !git ls -9
 	lf = !git ls --first-parent
 	lfz = !git lf -9
